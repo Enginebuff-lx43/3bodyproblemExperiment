@@ -20,15 +20,15 @@ sp = sim.particles
 sim.move_to_com()
 
 #functions for calculating the distance between particles
-def gendist1(particle):
+def gendist0(particle):
     distance1 = abs(particle[0].x - particle[1].x)
     distance2 = abs(particle[0].y - particle[1].y)
     return math.sqrt(distance1**2 + distance2**2)
-def gendist2(particle):
+def gendist1(particle):
     distance1 = abs(particle[0].x - particle[2].x)
     distance2 = abs(particle[0].y - particle[2].y)
     return math.sqrt(distance1**2 + distance2**2)
-def gendist3(particle):
+def gendist2(particle):
     distance1 = abs(particle[1].x - particle[2].x)
     distance2 = abs(particle[1].y - particle[2].y)
     return math.sqrt(distance1**2 + distance2**2)
