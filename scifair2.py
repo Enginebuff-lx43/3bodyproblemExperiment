@@ -60,15 +60,15 @@ while sim.t < max_time:
         sim.stop()
         break
     #ejection checks
-    if genvel(sp[0]) >= math.sqrt(2 * sim.G * 2*(sp[1].m) / ((gendist1(sp) + gendist2(sp))/2)):
+    if genvel(sp[0]) >= math.sqrt(2 * sim.G * ((sp[1].m)/gendist1(sp) + (sp[2].m)/gendist2(sp))):
         print(sim.t)
         sim.stop()
         break
-    if genvel(sp[1]) >= math.sqrt(2 * sim.G * 2*(sp[0].m) / ((gendist1(sp) + gendist3(sp))/2)):
+    if genvel(sp[1]) >= math.sqrt(2 * sim.G * ((sp[0].m)/gendist1(sp) + (sp[2].m)/gendist3(sp))):
         print(sim.t)
         sim.stop()
         break
-    if genvel(sp[2]) >= math.sqrt(2 * sim.G * 2*(sp[0].m) / ((gendist2(sp) + gendist3(sp))/2)):
+    if genvel(sp[2]) >= math.sqrt(2 * sim.G * ((sp[0].m)/gendist2(sp) + (sp[1].m)/gendist3(sp))):
         print(sim.t)
         sim.stop()
         break
