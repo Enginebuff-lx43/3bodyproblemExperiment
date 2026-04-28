@@ -2,4 +2,4 @@ DISCLAIMER: This is a school project. This is not a well written script. People 
 
 
 BASIC REQUIREMENTS: Python
-  NOTE: This script was tested with the default version of Python in Zorin OS, an Ubunut based Linux Distro, which is v3.12.3. Any newer versions, as well as any other operating system, have not been tested to work with this script, but it is likely to work.
+  NOTE: This script was tested with the default version of Python in Zorin OS, an Ubunut based Linux Distro, which is v3.12.3. Any newer versions, as well as any other operating system, have not been tested to work with this script, but it is expected to work.
