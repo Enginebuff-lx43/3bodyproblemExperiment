@@ -47,28 +47,28 @@ while sim.t < max_time:
     sim.integrate(sim.t + 0.01)
     max_time = sim.t + 0.01
     #collision checks
-    if gendist1(sp) <= (sp[0].r) + (sp[1].r):
+    if gendist0(sp) <= (sp[0].r) + (sp[1].r):
         print(sim.t)
         sim.stop()
         break
-    if gendist2(sp) <= (sp[0].r) + (sp[2].r):
+    if gendist1(sp) <= (sp[0].r) + (sp[2].r):
         print(sim.t)
         sim.stop()
         break
-    if gendist3(sp) <= (sp[1].r) + (sp[2].r):
+    if gendist2(sp) <= (sp[1].r) + (sp[2].r):
         print(sim.t)
         sim.stop()
         break
     #ejection checks
-    if genvel(sp[0]) >= math.sqrt(2 * sim.G * ((sp[1].m)/gendist1(sp) + (sp[2].m)/gendist2(sp))):
+    if genvel(sp[0]) >= math.sqrt(2 * sim.G * ((sp[1].m)/gendist0(sp) + (sp[2].m)/gendist1(sp))):
         print(sim.t)
         sim.stop()
         break
-    if genvel(sp[1]) >= math.sqrt(2 * sim.G * ((sp[0].m)/gendist1(sp) + (sp[2].m)/gendist3(sp))):
+    if genvel(sp[1]) >= math.sqrt(2 * sim.G * ((sp[0].m)/gendist0(sp) + (sp[2].m)/gendist2(sp))):
         print(sim.t)
         sim.stop()
         break
-    if genvel(sp[2]) >= math.sqrt(2 * sim.G * ((sp[0].m)/gendist2(sp) + (sp[1].m)/gendist3(sp))):
+    if genvel(sp[2]) >= math.sqrt(2 * sim.G * ((sp[0].m)/gendist1(sp) + (sp[1].m)/gendist2(sp))):
         print(sim.t)
         sim.stop()
         break
